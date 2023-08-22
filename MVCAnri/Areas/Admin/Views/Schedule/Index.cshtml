@@ -1,0 +1,46 @@
+﻿@model List<Schedule>
+
+
+<h1>Schedule</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> Schedule Name </th>
+            <th> Schedule Date </th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+
+        @foreach (var obj in Model.OrderBy(x => x.Date))
+        {
+            <tr>
+                <th>
+                    @obj.Name
+                </th>
+                <th>
+                    @obj.Date
+                </th>
+                <th>
+                    <div class="w-50 btn-group" role="group">
+                        <a asp-controller="Schedule" asp-route-id="@obj.Id" asp-action="Edit" class="btn btn-primary mx-2">
+                            <i class="bi bi-pencil-square"></i>Edit
+                        </a>
+                        <a asp-controller="Schedule" asp-route-id="@obj.Id" asp-action="Delete" class="btn btn-delete btn-danger mx-2">
+                            <i class="bi bi-trash-fill"></i>Delete
+                        </a>
+                    </div>
+                </th>
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+<a class="btn btn-primary" asp-controller="Schedule" asp-action="Create">
+    <i class="bi bi-calendar-plus"></i> Add Event
+</a>
+

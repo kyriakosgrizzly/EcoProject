@@ -1,0 +1,59 @@
+﻿@model ModelsF.Models.Product
+
+<h3>Update Product</h3>
+<form method="post">
+    <div class="row">
+        <div class="col-12">
+            <label asp-for="Title" class="text-dark">Title</label>
+            <input type="text" asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <label asp-for="Description">Description</label>
+            <input type="text" asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="ISBN" class="text-dark">ISBN</label>
+            <input type="text" asp-for="ISBN" class="form-control" />
+            <span asp-validation-for="ISBN" class="text-danger"></span>
+        </div>
+        <div class="col-6">
+            <label asp-for="Author" class="text-dark">Author</label>
+            <input type="text" asp-for="Author" class="form-control" />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label asp-for="ListPrice" class="text-dark">List Price</label>
+            <input type="number" asp-for="ListPrice" class="form-control" />
+            <span asp-validation-for="ListPrice" class="text-danger"></span>
+        </div>
+        <div class="col-3">
+            <label asp-for="Price" class="text-dark">Price for 1-50</label>
+            <input type="number" asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="col-3">
+            <label asp-for="Price50" class="text-dark">Price for 50+</label>
+            <input type="number" asp-for="Price50" class="form-control" />
+            <span asp-validation-for="Price50" class="text-danger"></span>
+        </div>
+        <div class="col-3">
+            <label asp-for="Price100" class="text-dark">Price for 100+</label>
+            <input type="number" asp-for="Price100" class="form-control" />
+            <span asp-validation-for="Price100" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary" style="width:150px"> Update </button>
+        <a asp-action="Index" class="bg-light btn btn-primary text-black" style="width:150px">
+            Return
+        </a>
+    </div>
+</form>

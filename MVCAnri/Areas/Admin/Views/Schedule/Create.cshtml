@@ -1,0 +1,35 @@
+﻿@model Schedule
+
+<h3>Add Event</h3>
+<form method="post">
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="Name" class="text-dark"> </label>
+            <input type="text" asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="Date"></label>
+            <input type="date" asp-for="Date" class="form-control" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <div class="row" style="margin-bottom:10px">
+        <div class="col-6">
+            <label asp-for="Comment"></label>
+            <input type="text" asp-for="Comment" class="form-control" />
+        </div>
+
+    </div>
+
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary" style="width:150px"> Add </button>
+        <a asp-action="Index" class="bg-light btn btn-primary text-black" style="width:150px">
+            Return
+        </a>
+    </div>
+</form>

@@ -1,0 +1,27 @@
+﻿@model Category
+
+<h3>Add Category</h3>
+<form method="post">
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="Name" class="text-dark"> </label>
+            <input type="text" asp-for="Name" disabled class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="DisplayOrder"></label>
+            <input type="number" asp-for="DisplayOrder" disabled class="form-control" />
+            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary text-bg-danger" style="width:150px"> Delete </button>
+        <a asp-action="Index" class="bg-light btn btn-primary text-black" style="width:150px">
+            Return
+        </a>
+    </div>
+</form>

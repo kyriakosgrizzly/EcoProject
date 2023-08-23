@@ -60,7 +60,7 @@ namespace DataAccess.Repository
         {
             return _context;
         }
-        public virtual IQueryable<T> Query()
+        public IQueryable<T> Query()
         {
             return _context.Set<T>().AsQueryable();
         }

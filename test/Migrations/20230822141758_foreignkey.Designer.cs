@@ -4,6 +4,7 @@ using MVCAnri.Controllers.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVCAnri.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230822141758_foreignkey")]
+    partial class foreignkey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -291,10 +294,6 @@ namespace MVCAnri.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<double>("ListPrice")
                         .HasColumnType("float");
 
@@ -326,7 +325,6 @@ namespace MVCAnri.Migrations
                             CategoryId = 1,
                             Description = "Description",
                             ISBN = "KEKW#",
-                            ImageUrl = "",
                             ListPrice = 25.0,
                             Price = 23.0,
                             Price100 = 20.0,
@@ -365,7 +363,7 @@ namespace MVCAnri.Migrations
                         {
                             Id = 1,
                             Comment = "",
-                            Date = new DateTime(2023, 8, 22, 21, 22, 38, 422, DateTimeKind.Local).AddTicks(4890),
+                            Date = new DateTime(2023, 8, 22, 21, 17, 58, 837, DateTimeKind.Local).AddTicks(9386),
                             Name = "School"
                         });
                 });

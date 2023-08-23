@@ -38,6 +38,7 @@ namespace MVCAnri.Controllers.Data
                 Price50 = 22,
                 Price100 = 20,
                 CategoryId = 1,
+                ImageUrl = String.Empty
             });
             modelBuilder.Entity<Category>().HasData(new Category
             {

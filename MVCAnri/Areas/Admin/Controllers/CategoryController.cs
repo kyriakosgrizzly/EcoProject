@@ -1,5 +1,6 @@
 ﻿using DataAccess.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ModelsF.Models;
 
 namespace MVCAnri.Areas.Admin.Controllers
@@ -20,6 +21,7 @@ namespace MVCAnri.Areas.Admin.Controllers
         }
         public IActionResult Create()
         {
+          
             return View();
         }
         [HttpPost]

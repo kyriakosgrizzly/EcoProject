@@ -13,7 +13,7 @@
             <th>DisplayOrder</th>
         </tr>
     </thead>
-    @foreach (var item in Model)
+    @foreach (var item in Model.OrderBy(x => x.DisplayOrder))
     {
         <tr>
 
